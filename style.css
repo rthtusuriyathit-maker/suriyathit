@@ -1,0 +1,192 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Itim', cursive, sans-serif;
+    user-select: none; /* ป้องกันไม่ให้แฟนกดคลุมดำข้อความ */
+}
+
+body {
+    background: #fff0f5; /* ชมพูพาสเทล */
+    background-image: 
+        radial-gradient(#ffd1dc 20%, transparent 20%),
+        radial-gradient(#ffd1dc 20%, transparent 20%);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* การ์ดตรงกลาง */
+.container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    z-index: 10;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border: 4px solid #ffb6c1;
+    border-radius: 30px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(255, 105, 180, 0.2);
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* รูปอนิเมชั่นชินจัง */
+.shinchan-img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+    transition: transform 0.3s ease;
+}
+
+.shinchan-img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+h1 {
+    color: #ff477e;
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 0px #fff, 3px 3px 0px #ffb6c1;
+}
+
+p.desc {
+    color: #ff7096;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+/* จัดการกลุ่มปุ่ม */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 80px;
+    position: relative;
+}
+
+.btn {
+    padding: 12px 35px;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+#yes-btn {
+    background: linear-gradient(135deg, #ff7096, #ff477e);
+    color: white;
+    box-shadow: 0 8px 15px rgba(255, 71, 126, 0.4);
+    z-index: 5;
+}
+
+#yes-btn:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 20px rgba(255, 71, 126, 0.6);
+}
+
+#no-btn {
+    background-color: #f7cad0;
+    color: #ff477e;
+    border: 2px solid #ffb6c1;
+    z-index: 4;
+}
+
+/* หน้าจอความสำเร็จ */
+.hidden {
+    display: none !important;
+}
+
+.success-title {
+    color: #ff0a54;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    animation: bounce 1s infinite alternate;
+}
+
+.success-desc {
+    color: #ff477e;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.date-badge {
+    background: #ffe3e8;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px dashed #ff7096;
+    margin-top: 15px;
+    color: #ff477e;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* ของตกแต่งพื้นหลัง */
+.floating-element {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.6;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shiro {
+    width: 80px;
+    bottom: 10%;
+    left: 5%;
+    animation-duration: 8s;
+}
+
+.heart-cloud {
+    width: 100px;
+    top: 15%;
+    right: 8%;
+    animation-duration: 7s;
+}
+
+.bottom-chins {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+.bottom-chins img {
+    width: 90px;
+    height: auto;
+}
+
+/* แอนิเมชันขยับ */
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}

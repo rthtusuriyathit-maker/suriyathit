@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>มีข้อความจากชินจังส่งถึงเธอแหละ! 🖍️🌸</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <img class="floating-element shiro" src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3RzdmhwcG92ZGt3YnJ6d3V4dXp6NXA3bmtleWZyNjJlMmtmcm1lMCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Ywj2iCO1TOkyQ/giphy.gif" alt="Shiro">
+    <img class="floating-element heart-cloud" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExdW5vOXlreTFhcHFzZ2V3OTMyY3Z2cGp2MWRscGgyZzR2bDJ2YzgxNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/WUx7865lOue11lSGAO/giphy.gif" alt="Shinchan Love">
+
+    <div class="container">
+        
+        <div id="question-card" class="card">
+            <img id="main-gif" class="shinchan-img" src="img/shinchan-love.jpg" alt="Shinchan Shy" style="width: 240px; height: 240px; object-fit: contain;">
+            <h1>เป็นแฟนกับพี่นะครับบบ</h1>
+            <p class="desc">ชินจังบอกว่าถ้าหนูปฏิเสธ ชินจังจะนอนร้องไห้สามวันเจ็ดวันเลยนะ</p>
+            
+            <div class="btn-group">
+                <button id="yes-btn" class="btn" onclick="celebrate()">เป็นนน</button>
+                <button id="no-btn" class="btn" onmouseover="moveNoButton()" onclick="moveNoButton()">ไม่เป็นนนTT</button>
+            </div>
+        </div>
+
+        <div id="success-card" class="card hidden">
+            <img class="shinchan-img" src="img/shinchan-love.jpg" alt="Shinchan Love" style="width: 240px; height: 240px; object-fit: contain;">
+            <h2 class="success-title">รักหมูจิ๋วที่สุดดดด 💖</h2>
+            <p class="success-desc">ขอบคุณที่เข้ามาในชีวิตพี่นะครับ พี่มีความสุขมากที่สุดเลยยย ตั้งใจเขียนเว็ปนี้เพื่อหนูเลยนะ มีแต่สีที่หนูชอบทั้งนัันเลยนะะ</p>
+            <div class="date-badge">
+                <p><i class="fa-solid fa-calendar-heart"></i> มีแฟนแล้วเว้ยยยย</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottom-chins">
+       
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
